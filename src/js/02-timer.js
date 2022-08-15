@@ -95,7 +95,9 @@
 // ДДля відображення повідомлень користувачеві, замість window.alert(), використовуй бібліотеку notiflix.
 
 
+// Описаний в документації
 import flatpickr from "flatpickr";
+// Додатковий імпорт стилів
 import "flatpickr/dist/flatpickr.min.css";
 import Notiflix from 'notiflix';
 
@@ -145,13 +147,20 @@ const options = {
     if (selectedDates[0] <= new Date()) {
         startBtn.disabled = true;
         Notiflix.Notify.failure('Please choose a date in the future');
+        myFun()
     }
     // console.log(selectedDates[0]);
   },
 };
 
+function myFun() {
+          let elem = document.querySelector("button");
+          elem.classList.add("newclass");
+}
+
 function onStartTimer() {
     let timerId = setInterval(() => {
+        
         let newDate = new Date(input.value) - new Date();
         startBtn.disabled = true;
         if (newDate >= 0) {
@@ -164,6 +173,7 @@ function onStartTimer() {
     else if (newDate <= 1) {
         Notiflix.Notify.failure('Qui timide rogat docet negare');
         clearInterval(timerId);
+        
     }
 
   }, 1000);

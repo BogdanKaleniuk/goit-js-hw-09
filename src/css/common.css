@@ -9,7 +9,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
   color: #212121;
-  line-height: 1.5;
+  line-height: 1.5;   
+  text-align: center;
 }
 
 img {
@@ -17,9 +18,17 @@ img {
   max-width: 100%;
 }
 
+button {
+  border-radius: 10%;
+  /* width: 60px;
+  height: 20px; */
+}
+
 .timer {
+ margin-top: 20px;
  display: flex;
  gap: 20px;
+ justify-content: center;
 }
 
 .field {
@@ -28,3 +37,23 @@ img {
   justify-content: center;
   display: flex;
 }
+
+
+.value {
+  font-weight: 700;
+}
+
+.active {
+  color: green;
+  font-weight: 700;
+
+}
+
+.newclass {
+  color: red;
+  border-color: red;
+  border-radius: 10%;
+}
+
+
+
