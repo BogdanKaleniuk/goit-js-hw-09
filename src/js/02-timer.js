@@ -109,6 +109,7 @@ const hours = document.querySelector('[data-hours]');
 const minutes = document.querySelector('[data-minutes]');
 const seconds = document.querySelector('[data-seconds]');
 
+
 function convertMs(ms) {
   // Number of milliseconds per unit of time
   const second = 1000;
@@ -149,14 +150,23 @@ const options = {
         Notiflix.Notify.failure('Please choose a date in the future');
         myFun()
     }
+    else {
+      startBtn.disabled = false;
+      // myFunTwo()
+    }
     // console.log(selectedDates[0]);
   },
 };
 
 function myFun() {
           let elem = document.querySelector("button");
-          elem.classList.add("newclass");
+          elem.classList.add("newclass");        
 }
+
+// function myFunTwo() {
+//           let elemTwo = document.querySelector("button");
+//           elemTwo.classList.add("newclassTwo");
+// }
 
 function onStartTimer() {
     let timerId = setInterval(() => {
