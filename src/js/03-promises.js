@@ -33,7 +33,7 @@ function onSubmitForm(e) {
   if (delay >= 0 && step >= 0 && amount > 0) {
     for (let position = 1; position <= amount; position += 1) {
       delay += step;
-      createPromise(2, 1500)
+      createPromise(position, delay)
   .then(({ position, delay }) => {
     Notiflix.Notify.success(
     `✅ Fulfilled promise ${position} in ${delay}ms`);
